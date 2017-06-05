@@ -59,11 +59,11 @@ char[] alphabet = alb.toCharArray();
 BufferedReader in = new BufferedReader(new InputStreamReader(System.in,"Cp1251")); 
 
 
-System.out.println("Enter message"); 
+System.out.println("Введите сообщение"); 
 String messagetmp = in.readLine(); 
 char[] message = messagetmp.toCharArray(); 
 
-System.out.println("Enter the key"); 
+System.out.println("Введите ключ шифрования"); 
 String keytmp = in.readLine(); 
 
 if (keytmp.length() > message.length) { 
@@ -82,7 +82,7 @@ int count = 1;
 double heighttmp = message.length * 1.0 / key.length ; 
 int height = (int) (Math.ceil(heighttmp) + 2); 
 int stolbec; 
-System.out.print("And the encoded message is ... "); 
+System.out.print("Ваше закодированное сообщение "); 
 for (int j = 0; j < key.length; j++) { 
 stolbec = Arrays.asList(map[1]).indexOf(String.valueOf(count)); 
 for (int i = 2; i < height; i++) { 
@@ -92,7 +92,7 @@ count++;
 } 
 
 System.out.println("\n"); 
-System.out.print("And the decoded message is ... "); 
+System.out.print("Ваше раскодированное сообщение "); 
 for (int i = 2; i < height; i++) { 
 for (int j = 0; j < key.length; j++) { 
 System.out.print(map[i][j]); 
